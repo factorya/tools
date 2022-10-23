@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tools</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="./js/my.js"></script>
+</head>
+<body>
+	<div>
+	
+		<div style="display: flex;
+		flex-direction: column;
+		margin-top: 150px;">
+		<div style="display: flex;
+		justify-content: center;
+		margin-top: 15px;">
+			<div>tokenName：<input type="text" id="name"></div>
+			
+		</div>
+		<div style="display: flex;
+		justify-content: center;
+		margin-top: 15px;">
+		<div>tokenSymbol：<input type="text" id="symbol"></div>
+		</div>
+		<div style="display: flex;
+		justify-content: center;
+		margin-top: 15px;">
+		<div>totalSupply：<input type="text" id="amount"></div>
+		</div>
+		<div style="display: flex;
+		justify-content: center;
+		margin-top: 15px;">
+		<div>marketWallet：<input type="text" id="markWallet"></div>
+		</div>
+			<div style="display: flex;
+			justify-content: center;
+			margin-top: 15px;">
+				<div><button onclick="initWallet()" id="select-address" class="wallet">Connect Wallet</button></div>
+				<div><button onclick="deploy1()"  class="wallet">Deploy</button></div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+<script>	
+function deploy1(){
+	var name = $("#name").val();
+	var symbol = $("#symbol").val();
+	var amount = $("#amount").val();
+	var markWallet = $("#markWallet").val();
+	if(name && symbol && amount && markWallet){
+		deploy(name,symbol,amount,markWallet);
+	}else{
+		alert("Error parmas");
+	}
+	
+}
+</script>
+</html>
